@@ -87,17 +87,14 @@ img {
     /* gives images a curved border  */
 }
 
-#footer-ul {
-    display: flex;
-    list-style: none;
-}
-
-#footer-ul > div > li {
-    margin-left: 12px;
-}
-
-#footer-ul > div > li > a {
-    text-decoration: none;
-    color: white;
-    padding: 18px;
+#grid-container {
+    display: grid;
+    grid-template-areas:
+    "body-header body-header body-header"
+    "first-main second-main second-main"
+    "third-main third-main third-main"
+    "fourth-main fourth-main fifth-main"
+    "footer footer footer"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
