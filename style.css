@@ -4,50 +4,53 @@ body {
     font-size: 1.5vw;
 }
 
-#logo {
-    /* is the same as the h1 tag  */
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-}
-
-ul {
-    margin: 0px;
-}
-
-#main-header {
-    background-color: pink;
-    color: white;
+#body-header {
+    grid-area: header;
     display: flex;
+    background-color: white;
+    color: black;
     height: 12vh;
     align-items: center; 
     justify-content: center;
+    padding: 16px;
+    text-align: center;
 }
 
-#nav-ul {
-    display: flex;
-}
-
-#nav-ul > li {
+#logo {
+    margin: 0px;
     padding: 8px;
-    margin: 3px;
+    font-family: sans-serif;
 }
 
-body > header > nav > ul {
+#menu-left {
+    display: flex;
     list-style: none;
     text-decoration: none;
 }
 
-.navbutton {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 8%;
-    /* can use this class (.navbutton) instead of the long line: body > header > nav > ul > li > a because we made it an id*/
+#menu-left > li {
+    padding: 8px;
+    margin: 3px;
 }
 
-body > main article {
+#menu-right {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+#menu-right > li {
+    padding: 8px;
+    margin: 3px;
+}
+
+.navbutton {
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+}
+
+#first-main {
     width: 80%;
     margin: auto;
     /* auto sets the margin to centre  */
