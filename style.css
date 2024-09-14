@@ -1,100 +1,162 @@
+/* Set Up  */
+
 body {
-    font-family: sans-serif;
     margin: 0px;
-    font-size: 1.5vw;
+    font-family: sans-serif;
 }
 
-#body-header {
+/* Header  */
+
+header {
     grid-area: header;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    height: 60px;
     background-color: white;
+}
+
+#menu {
+    display: flex;
+    /* justify-content: flex-end; */
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > a {
+    text-decoration: none;
     color: black;
-    height: 12vh;
-    align-items: center; 
-    justify-content: center;
-    padding: 16px;
-    text-align: center;
+    padding: 10px;
+    font-size: 1vw;
 }
 
 #logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: sans-serif;
-}
-
-#menu-left {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-}
-
-#menu-left > li {
-    padding: 8px;
-    margin: 3px;
-}
-
-#menu-right {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-}
-
-#menu-right > li {
-    padding: 8px;
-    margin: 3px;
-}
-
-.navbutton {
+    font-size: 5vw;
     color: black;
-    text-decoration: none;
-    padding: 12px;
+    font-weight: lighter;
 }
 
-#first-main {
-    width: 80%;
-    margin: auto;
-    /* auto sets the margin to centre  */
-}
+/* Main Content  */
 
-#main-content {
-    display: flex;
-    justify-content: space-around;
-}
+/* Article 1 */
 
-#main-content > div {
-    width: 80%;
-}
-
-h2 {
+#article1 {
+    grid-area: article1;
+    padding: 100px;
+    font-size: 2vw;
     text-align: center;
+    background-color: rgb(142, 161, 204);
+    color: white;
 }
 
 form {
+    margin-top: 50px;
+}
+
+form input[type="submit"] {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+/* Article 2 */
+
+#article2 {
+    grid-area: article2;
+    padding: 32px; 
+    background-color: rgb(213, 212, 212);
+    color: rgb(0, 0, 0);
+}
+
+.article2-heading {
     text-align: center;
+    font-weight: lighter;
 }
 
-body > footer {
-    background-color: pink;
-    color: white;
+.reviews {
     display: flex;
-    height: 15vh;
-    align-items: center; 
-    justify-content:space-around;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 20px;
 }
 
-img {
-    border-radius: 10%;
-    /* gives images a curved border  */
+/* Reviews */
+
+.review {
+    text-align: center; 
+    flex: 1;
 }
+
+.review > img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+.review > p {
+    margin-top: 20px;
+    max-width: 400px;
+    font-size: 1vw;
+    color: rgb(0, 0, 0);
+}
+
+/* Article 3  */
+
+.article3 {
+    grid-area: article3;
+    padding: 32px;
+    background-color: rgb(232, 232, 232);
+    color: rgb(0, 0, 0);
+}
+
+/* Article 4  */
+
+.article4 {
+    grid-area: article4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(139, 141, 161);
+}
+
+.article4 > a {
+    text-decoration: none;
+    font-size: 1vw;
+    color: #ffffff;
+    padding: 30px 50px;
+    display: block;
+}
+
+/* Footer  */
+
+footer {
+    grid-area: footer;
+    padding: 16px;
+    background-color: rgb(142, 161, 204);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 60px;
+}
+
+/* Grid Layout */
 
 #grid-container {
     display: grid;
     grid-template-areas:
-    "body-header body-header body-header"
-    "first-main second-main second-main"
-    "third-main third-main third-main"
-    "fourth-main fourth-main fifth-main"
-    "footer footer footer"
-    ;
+    "header header header"
+    "article1 article1 article1"
+    "article2 article2 article2"
+    "article3 article3 article4"
+    "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
 }
